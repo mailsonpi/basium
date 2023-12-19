@@ -26,7 +26,7 @@ const AllProducts: NextPage = () => {
 
     React.useEffect(() => {
         const items: IPart[] = [];
-        typeOfProducts.map((item) => items.push(...item));
+        typeOfProducts.map((item) => items.push(...(item as IPart[])));
         setAllProduct(items);
     }, []);
 
