@@ -26,7 +26,7 @@ const AllProducts: NextPage = () => {
 
     React.useEffect(() => {
         const items: IPart[] = [];
-        typeOfProducts.map((item) => items.push(...item));
+        typeOfProducts.map((item) => items.push(...(item as IPart[])));
         setAllProduct(items);
     }, []);
 
@@ -155,6 +155,54 @@ const AllProducts: NextPage = () => {
                         }}
                     >
                         T-Shirts
+                    </Text>
+                    <Text
+                        color={
+                            sexSelected === "masculine"
+                                ? "white"
+                                : "secondary.800"
+                        }
+                        fontWeight="bold"
+                        onClick={() => setSearch("Camisa Polo")}
+                        transition=".2s"
+                        cursor="pointer"
+                        _hover={{
+                            opacity: 0.6,
+                        }}
+                    >
+                        Camisas Polo
+                    </Text>
+                    <Text
+                        color={
+                            sexSelected === "masculine"
+                                ? "white"
+                                : "secondary.800"
+                        }
+                        fontWeight="bold"
+                        onClick={() => setSearch("Trajes")}
+                        transition=".2s"
+                        cursor="pointer"
+                        _hover={{
+                            opacity: 0.6,
+                        }}
+                    >
+                        Trajes
+                    </Text>
+                    <Text
+                        color={
+                            sexSelected === "masculine"
+                                ? "white"
+                                : "secondary.800"
+                        }
+                        fontWeight="bold"
+                        onClick={() => setSearch("Livros")}
+                        transition=".2s"
+                        cursor="pointer"
+                        _hover={{
+                            opacity: 0.6,
+                        }}
+                    >
+                        Livros
                     </Text>
                     <Text
                         color={

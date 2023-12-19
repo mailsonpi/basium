@@ -27,7 +27,7 @@ const FilteredProducts: NextPage = () => {
     React.useEffect(() => {
         setSearch(localStorage.getItem("category") as category);
         const items: IPart[] = [];
-        typeOfProducts.map((item) => items.push(...item));
+        typeOfProducts.map((item) => items.push(...(item as IPart[])));
         setAllProduct(items);
     }, []);
 

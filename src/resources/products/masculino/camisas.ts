@@ -23,11 +23,10 @@ const Camisas: IPart[] = [
             "/img/products/ts1.jpeg",
             "/img/products/ts1.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão, Cor: Creme.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão, Cor: Creme.",
     },
     {
         id: 32,
@@ -39,11 +38,10 @@ const Camisas: IPart[] = [
             "/img/products/ts2.jpeg",
             "/img/products/ts2.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão.” Cor: Branca.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão.” Cor: Branca.",
     },
     {
         id: 33,
@@ -55,11 +53,10 @@ const Camisas: IPart[] = [
             "/img/products/ts3.jpeg",
             "/img/products/ts3.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão.” Cor: Branca.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão.” Cor: Branca.",
     },
     {
         id: 34,
@@ -71,11 +68,10 @@ const Camisas: IPart[] = [
             "/img/products/ts4.jpeg",
             "/img/products/ts4.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão.” Cor: Verde Limão.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão.” Cor: Verde Limão.",
     },
     {
         id: 35,
@@ -87,11 +83,10 @@ const Camisas: IPart[] = [
             "/img/products/ts5.jpeg",
             "/img/products/ts5.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão.” Cor: Marrom Claro.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão.” Cor: Marrom Claro.",
     },
     {
         id: 36,
@@ -103,11 +98,10 @@ const Camisas: IPart[] = [
             "/img/products/ts6.jpeg",
             "/img/products/ts6.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão.” Cor: Creme.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão.” Cor: Creme.",
     },
     {
         id: 37,
@@ -119,9 +113,9 @@ const Camisas: IPart[] = [
             "/img/products/ts7.jpeg",
             "/img/products/ts7.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts",],
+        category: ["Camisas", "T-Shirts"],
         description:
             "Composição: “ 100% Algodão.” Cor: Azul Marinho c/ Estampa.",
     },
@@ -135,11 +129,10 @@ const Camisas: IPart[] = [
             "/img/products/ts8.jpeg",
             "/img/products/ts8.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão.” Cor: Branca.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão.” Cor: Branca.",
     },
 ];
 
