@@ -13,8 +13,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor:  Creme.",
+        description: "Composição: “100% Couro”, Cor:  Creme.",
     },
     {
         id: 202,
@@ -28,8 +27,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor: Castor.",
+        description: "Composição: “100% Couro”, Cor: Castor.",
     },
     {
         id: 203,
@@ -43,8 +41,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor: Preta.",
+        description: "Composição: “100% Couro”, Cor: Preta.",
     },
     {
         id: 204,
@@ -58,8 +55,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor: Crepe.",
+        description: "Composição: “100% Couro”, Cor: Crepe.",
     },
     {
         id: 205,
@@ -73,8 +69,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor: Marrom Nocciola.",
+        description: "Composição: “100% Couro”, Cor: Marrom Nocciola.",
     },
     {
         id: 206,
@@ -88,8 +83,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor:  Ouro.",
+        description: "Composição: “100% Couro”, Cor:  Ouro.",
     },
     {
         id: 207,
@@ -103,8 +97,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor: Nocciola.",
+        description: "Composição: “100% Couro”, Cor: Nocciola.",
     },
     {
         id: 208,
@@ -118,8 +111,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-            "Composição: “100% Couro”, Cor: Magenta.",
+        description: "Composição: “100% Couro”, Cor: Magenta.",
     },
     {
         id: 209,
@@ -133,8 +125,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-        "Composição: “100% Couro”, Cor: Jeans.",
+        description: "Composição: “100% Couro”, Cor: Jeans.",
     },
     {
         id: 2010,
@@ -148,8 +139,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-        "Composição: “100% Couro”, Cor: Creme.",
+        description: "Composição: “100% Couro”, Cor: Creme.",
     },
     {
         id: 2011,
@@ -163,8 +153,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-        "Composição: “100% Couro”, Cor: Oliva.",
+        description: "Composição: “100% Couro”, Cor: Oliva.",
     },
     {
         id: 2012,
@@ -178,8 +167,7 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-        "Composição: “100% Couro”, Cor: Preto.",
+        description: "Composição: “100% Couro”, Cor: Preto.",
     },
     {
         id: 2013,
@@ -193,10 +181,8 @@ const acessorio: IPart[] = [
         ],
         tamanhos: ["P", "M", "G"],
         category: ["Acessórios"],
-        description:
-        "Composição: “100% Couro”, Cor: Ouro.",
+        description: "Composição: “100% Couro”, Cor: Ouro.",
     },
 ];
-
 
 export { acessorio };

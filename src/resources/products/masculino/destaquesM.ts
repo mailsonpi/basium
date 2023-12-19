@@ -11,11 +11,10 @@ const destaquesM: IPart[] = [
             "/img/products/ts1.jpeg",
             "/img/products/ts1.jpeg",
         ],
-        tamanhos: ["P", "M","G","GG"],
+        tamanhos: ["P", "M", "G", "GG"],
         cores: ["Preta", "Azul", "Vermelho"],
-        category: ["Camisas", "T-Shirts", ],
-        description:
-            "Composição: “ 100% Algodão, Cor: Creme.",
+        category: ["Camisas", "T-Shirts"],
+        description: "Composição: “ 100% Algodão, Cor: Creme.",
     },
     {
         id: 701,
@@ -27,7 +26,19 @@ const destaquesM: IPart[] = [
             "/img/products/1.jpeg",
             "/img/products/1.jpeg",
         ],
-        tamanhos:["38", "40", "42","44","46","48","50","52","54","56","58",],
+        tamanhos: [
+            "38",
+            "40",
+            "42",
+            "44",
+            "46",
+            "48",
+            "50",
+            "52",
+            "54",
+            "56",
+            "58",
+        ],
         category: ["Blazer"],
         description:
             "Composição: 55% Algodão, 40% Poliéster e 5% Elastano. Cor: 061 - Creme Areia.",
@@ -42,10 +53,9 @@ const destaquesM: IPart[] = [
             "/img/products/1s.jpeg",
             "/img/products/1s.jpeg",
         ],
-        tamanhos: ["37", "38", "40", "42","44","46",],
+        tamanhos: ["37", "38", "40", "42", "44", "46"],
         category: ["Calçados"],
-        description:
-            "Sapato 100% Couro Composição:  Cor: Preto.",
+        description: "Sapato 100% Couro Composição:  Cor: Preto.",
     },
 ];
 

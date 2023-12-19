@@ -23,11 +23,7 @@ const acessorio: IPart[] = [
         marca: "Gold",
         price: 115,
         cores: ["Café"],
-        image: [
-            "/img/products/carteira1.jpg",
-            "/img/products/carteira1.jpg",
-           
-        ],
+        image: ["/img/products/carteira1.jpg", "/img/products/carteira1.jpg"],
         tamanhos: ["9 cm"],
         category: ["Acessórios"],
         description:

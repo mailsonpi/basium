@@ -176,9 +176,7 @@ const ProductDetails: NextPage = () => {
                         >
                             {product?.nome}
                         </Heading>
-                        <Text>
-                            {product?.description}
-                        </Text>
+                        <Text>{product?.description}</Text>
                         <Heading
                             mb={3}
                             color={

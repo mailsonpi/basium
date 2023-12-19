@@ -11,10 +11,9 @@ const sapatos: IPart[] = [
             "/img/products/1s.jpeg",
             "/img/products/1s.jpeg",
         ],
-        tamanhos: ["37", "38", "40", "42","44","46",],
+        tamanhos: ["37", "38", "40", "42", "44", "46"],
         category: ["Calçados"],
-        description:
-            "Sapato 100% Couro Composição:  Cor: Preto.",
+        description: "Sapato 100% Couro Composição:  Cor: Preto.",
     },
     {
         id: 502,
@@ -26,7 +25,7 @@ const sapatos: IPart[] = [
             "/img/products/2s.jpeg",
             "/img/products/2s.jpeg",
         ],
-        tamanhos: ["36","37", "38", "40", "42","44","46",],
+        tamanhos: ["36", "37", "38", "40", "42", "44", "46"],
         category: ["Calçados"],
         description:
             "description: Sapato 100% Couro Composição:  Cor: Marrom Café.",
@@ -41,10 +40,9 @@ const sapatos: IPart[] = [
             "/img/products/3s.jpeg",
             "/img/products/3s.jpeg",
         ],
-        tamanhos: ["37", "38","39", "40", "42","44",],
+        tamanhos: ["37", "38", "39", "40", "42", "44"],
         category: ["Calçados"],
-        description:
-            "Sapato 100% Couro Composição:  Cor: Marrom Claro.",
+        description: "Sapato 100% Couro Composição:  Cor: Marrom Claro.",
     },
     {
         id: 504,
@@ -56,7 +54,7 @@ const sapatos: IPart[] = [
             "/img/products/4s.jpeg",
             "/img/products/4s.jpeg",
         ],
-        tamanhos:["37", "38","39", "40", "42","44",],
+        tamanhos: ["37", "38", "39", "40", "42", "44"],
         category: ["Calçados"],
         description:
             "  description: Sapato 100% Couro com camurça e sola Tratorada. Composição:  Cor: Preto.",
@@ -71,7 +69,7 @@ const sapatos: IPart[] = [
             "/img/products/5s.jpeg",
             "/img/products/5s.jpeg",
         ],
-        tamanhos: ["37", "38", "39", "40","41","42","43","44",],
+        tamanhos: ["37", "38", "39", "40", "41", "42", "43", "44"],
         category: ["Calçados"],
         description:
             "apato Masculino 100% Couro com Camurça. Composição:  Cor: Azul Claro.",
@@ -86,7 +84,7 @@ const sapatos: IPart[] = [
             "/img/products/6s.jpeg",
             "/img/products/6s.jpeg",
         ],
-        tamanhos: ["37", "38", "39", "40","41","42","43","44",],
+        tamanhos: ["37", "38", "39", "40", "41", "42", "43", "44"],
         category: ["Calçados"],
         description:
             "Sapato 100% Couro com Camurça. Composição:  Cor: Azul Marinho.",
@@ -101,7 +99,7 @@ const sapatos: IPart[] = [
             "/img/products/7s.jpeg",
             "/img/products/7s.jpeg",
         ],
-        tamanhos: ["37", "38", "39", "40","41","42","43","44",],
+        tamanhos: ["37", "38", "39", "40", "41", "42", "43", "44"],
         category: ["Calçados"],
         description:
             "Sapato 100% Couro com Camurça. Composição:  Cor: Azul Marinho.",
@@ -116,10 +114,9 @@ const sapatos: IPart[] = [
             "/img/products/8s.jpeg",
             "/img/products/8s.jpeg",
         ],
-        tamanhos: ["37", "38", "39", "40","41","42","43","44",],
+        tamanhos: ["37", "38", "39", "40", "41", "42", "43", "44"],
         category: ["Calçados"],
-        description:
-            "Sapato 100% Couro. Composição:  Cor: Preto.",
+        description: "Sapato 100% Couro. Composição:  Cor: Preto.",
     },
     {
         id: 509,
@@ -131,10 +128,9 @@ const sapatos: IPart[] = [
             "/img/products/9s.jpeg",
             "/img/products/9s.jpeg",
         ],
-        tamanhos: ["37", "38", "39", "40","41","42","43","44",],
+        tamanhos: ["37", "38", "39", "40", "41", "42", "43", "44"],
         category: ["Calçados"],
-        description:
-            "Sapato 100% Couro. Composição:  Cor: Marrom Escuro",
+        description: "Sapato 100% Couro. Composição:  Cor: Marrom Escuro",
     },
     {
         id: 510,
@@ -146,10 +142,9 @@ const sapatos: IPart[] = [
             "/img/products/10s.jpeg",
             "/img/products/10s.jpeg",
         ],
-        tamanhos: ["37", "38", "39", "40","41","42","43","44",],
+        tamanhos: ["37", "38", "39", "40", "41", "42", "43", "44"],
         category: ["Calçados"],
-        description:
-            "Sapato 100% Couro. Composição:  Cor: Azul Branco.",
+        description: "Sapato 100% Couro. Composição:  Cor: Azul Branco.",
     },
     {
         id: 511,
@@ -161,10 +156,9 @@ const sapatos: IPart[] = [
             "/img/products/11s.jpeg",
             "/img/products/11s.jpeg",
         ],
-        tamanhos: ["37", "38", "39", "40","41","42","43","44",],
+        tamanhos: ["37", "38", "39", "40", "41", "42", "43", "44"],
         category: ["Calçados"],
-        description:
-            "Sapato 100% Couro. Composição:  Cor: All Black.",
+        description: "Sapato 100% Couro. Composição:  Cor: All Black.",
     },
 ];
 

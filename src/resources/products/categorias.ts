@@ -12,4 +12,7 @@ export type category =
     | "Livros"
     | "Camisas"
     | "Nova colecao"
+    | "Livros"
+    | "Camisa Polo"
+    | "Trajes"
     | "";
