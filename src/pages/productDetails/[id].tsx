@@ -38,7 +38,7 @@ const ProductDetails: NextPage = () => {
 
     const getProduct = () => {
         const items: IPart[] = [];
-        typeOfProducts.map((item) => items.push(...item));
+        typeOfProducts.map((item) => items.push(...(item as IPart[])));
         const camisa = items.find((item: any) => item.id === Number(id));
         setProduct(camisa);
     };
@@ -188,19 +188,21 @@ const ProductDetails: NextPage = () => {
                             R$ {product?.price}
                         </Heading>
                         <Flex gap={3}>
-                            <Select
-                                w="max-content"
-                                onChange={(e) => setSize(e.target.value)}
-                            >
-                                {product?.tamanhos.map((item) => (
-                                    <option
-                                        key={item}
-                                        style={{ textAlign: "center" }}
-                                    >
-                                        {item}
-                                    </option>
-                                ))}
-                            </Select>
+                            {product?.tamanhos && (
+                                <Select
+                                    w="max-content"
+                                    onChange={(e) => setSize(e.target.value)}
+                                >
+                                    {product?.tamanhos.map((item) => (
+                                        <option
+                                            key={item}
+                                            style={{ textAlign: "center" }}
+                                        >
+                                            {item}
+                                        </option>
+                                    ))}
+                                </Select>
+                            )}
                             {product?.cores && (
                                 <Select
                                     w="max-content"
