@@ -10,12 +10,25 @@ interface Livros {
 
 const livros: Livros[] = [
     {
-        id: 40000,
+        id: 401,
         nome: "Livro",
         price: 1500,
         image: [
-            "https://www.redeicm.org.br/carmo/wp-content/uploads/sites/5/2019/01/Livro.jpg",
-            "https://www.redeicm.org.br/carmo/wp-content/uploads/sites/5/2019/01/Livro.jpg",
+            "/img/products/ts2.jpeg",
+            "/img/products/ts2.jpeg",
+            "/img/products/ts2.jpeg",
+        ],
+        category: ["Livros"],
+        description: "Este é um livro",
+    },
+    {
+        id: 402,
+        nome: "Livro",
+        price: 1500,
+        image: [
+            "/img/products/ts2.jpeg",
+            "/img/products/ts2.jpeg",
+            "/img/products/ts2.jpeg",
         ],
         category: ["Livros"],
         description: "Este é um livro",

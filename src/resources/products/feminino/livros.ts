@@ -14,7 +14,9 @@ const livros: Livros[] = [
         nome: "Livro",
         price: 1500,
         image: [
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fexame.com%2Fcarreira%2Fdia-mundial-do-livro-nove-executivas-indicam-obras-essencias-para-sua-carreira%2F&psig=AOvVaw3I7w2u0GgyoYCs_NjXHJEy&ust=1703034295660000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKDxsKSnmoMDFQAAAAAdAAAAABAD",
+            "/img/products/ts2.jpeg",
+            "/img/products/ts2.jpeg",
+            "/img/products/ts2.jpeg",
         ],
         category: ["Livros"],
         description: "Este é um livro",
