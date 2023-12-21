@@ -22,17 +22,20 @@ const AllProducts: NextPage = () => {
     const router = useRouter();
 
     const typeOfProducts =
-        sexSelected === "masculine" ? masculineProducts : feminineProducts;
+        typeof window !== "undefined" &&
+        window.localStorage.getItem("sex") === "masculine"
+            ? masculineProducts
+            : feminineProducts;
 
     React.useEffect(() => {
         const items: IPart[] = [];
         typeOfProducts.map((item) => items.push(...(item as IPart[])));
-        setAllProduct(items);
+        setAllProduct(items.sort());
     }, []);
 
     const indexLast = page * itemPerPage;
     const indexFirst = indexLast - itemPerPage;
-    let productsList = allProduct.slice(indexFirst, indexLast);
+    let productsList = allProduct.sort().slice(indexFirst, indexLast);
     const renderItem = () => {
         if (search) {
             const filtered = allProduct.filter((item) =>
@@ -41,7 +44,7 @@ const AllProducts: NextPage = () => {
             productsList = filtered;
             return productsList;
         }
-        return productsList;
+        return productsList.sort();
     };
     const nextPage = () => {
         if (productsList.length >= itemPerPage) {
