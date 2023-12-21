@@ -25,9 +25,9 @@ const HomeCarousel: React.FC = () => {
             text2: "Seu estilo com",
             text3: "toque de classe!",
             off: {
-                text1: "Parcelas de 6x sem juros",
-                text2: "Enviamos para todo Brasil",
-                text3: "Desconto de 10% em compras no pix",
+                text1: "",
+                text2: "",
+                text3: "",
             },
         },
         {
@@ -36,9 +36,9 @@ const HomeCarousel: React.FC = () => {
             text2: "Calçados a partir de",
             text3: "R$ 99,90",
             off: {
-                text1: "Parcelas de 6x sem juros",
-                text2: "Enviamos para todo Brasil",
-                text3: "Desconto de 10% em compras no pix",
+                text1: "",
+                text2: "",
+                text3: "",
             },
         },
         {
@@ -47,9 +47,9 @@ const HomeCarousel: React.FC = () => {
             text2: "Acessórios a partir de",
             text3: "R$ 34,99",
             off: {
-                text1: "Parcelas de 6x sem juros",
-                text2: "Enviamos para todo Brasil",
-                text3: "Desconto de 10% em compras no pix",
+                text1: "",
+                text2: "",
+                text3: "",
             },
         },
     ];
@@ -100,6 +100,8 @@ const HomeCarousel: React.FC = () => {
                 showArrows={false}
                 showStatus={false}
                 showThumbs={false}
+                swipeable
+                emulateTouch
                 width="100%"
                 infiniteLoop
                 interval={2000}
@@ -115,7 +117,7 @@ const HomeCarousel: React.FC = () => {
                         mx="auto"
                         bgRepeat="no-repeat"
                         bgPosition="right"
-                        h={{ base: "45vh", md: "90vh" }}
+                        h={{ base: "45vh", md: "68vh" }}
                     >
                         <Flex
                             direction="column"
@@ -161,7 +163,7 @@ const HomeCarousel: React.FC = () => {
                                         bgPosition: "center",
                                     }}
                                     w="200px"
-                                    mt={20}
+                                    mt={32}
                                     fontSize="15px"
                                     h="50px"
                                     color="white"

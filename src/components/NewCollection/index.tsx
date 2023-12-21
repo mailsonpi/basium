@@ -25,7 +25,7 @@ const NewCollection: React.FC = () => {
                 textAlign="center"
                 color={sexSelected === "masculine" ? "white" : "secondary.900"}
             >
-                Modal Casual
+                Camisas Sociais
             </Text>
             <Grid
                 w="85%"

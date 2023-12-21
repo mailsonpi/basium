@@ -39,14 +39,14 @@ const Categories: React.FC = () => {
                     p={5}
                 >
                     <Text fontWeight={600} fontSize={{ base: 32, md: 38 }}>
-                        Seja elegante no seu trabalho
+                        Moda corporativa
                     </Text>
                     <Text
                         fontSize={{ base: 16, md: 20 }}
                         mb={1}
                         fontWeight={600}
                     >
-                        Mais estilo para seu trabalho.
+                        Mais elegância no seu trabalho
                     </Text>
                     <Box
                         bg="secondary.800"
@@ -92,7 +92,7 @@ const Categories: React.FC = () => {
                         mb={1}
                         fontWeight={600}
                     >
-                        Seu dia-a-dia com mais estilo.
+                        Estilo e casualidade
                     </Text>
                     <Box
                         bg="secondary.800"
@@ -171,14 +171,14 @@ const Categories: React.FC = () => {
                     p={5}
                 >
                     <Text fontWeight={600} fontSize={{ base: 32, md: 38 }}>
-                        Amplie sua visão do mundo, com mais conhecimentos
+                        Dicas
                     </Text>
                     <Text
                         fontSize={{ base: 16, md: 20 }}
                         mb={1}
                         fontWeight={600}
                     >
-                        te ajudamos no dia-a-dia.
+                        Amplie sua visão do mundo, com mais conhecimentos
                     </Text>
                     <Box
                         bg="secondary.800"

@@ -27,14 +27,14 @@ const ProductList: React.FC = () => {
                 textAlign="center"
                 color={sexSelected === "masculine" ? "white" : "secondary.900"}
             >
-                Produtos em Destaque
+                Mais Vendidos
             </Heading>
             <Text
                 mt={5}
                 textAlign="center"
                 color={sexSelected === "masculine" ? "white" : "secondary.900"}
             >
-                Coleção premium
+                Destaque
             </Text>
             <Grid
                 w="85%"
