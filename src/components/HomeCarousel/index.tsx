@@ -45,7 +45,7 @@ const HomeCarousel: React.FC = () => {
             url: "url('/ImgBannerHome/fullbanner_acessoriosM.svg')",
             text1: "Grandes Ofertas",
             text2: "Acessórios a partir de",
-            text3: "R$ 34,99",
+            text3: "R$ 35,90",
             off: {
                 text1: "",
                 text2: "",
@@ -97,7 +97,6 @@ const HomeCarousel: React.FC = () => {
         >
             <Carousel
                 showIndicators={false}
-                showArrows={false}
                 showStatus={false}
                 showThumbs={false}
                 swipeable
