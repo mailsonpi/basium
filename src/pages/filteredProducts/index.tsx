@@ -22,7 +22,10 @@ const FilteredProducts: NextPage = () => {
     const router = useRouter();
 
     const typeOfProducts =
-        sexSelected === "masculine" ? masculineProducts : feminineProducts;
+        typeof window !== "undefined" &&
+        window.localStorage.getItem("sex") === "masculine"
+            ? masculineProducts
+            : feminineProducts;
 
     React.useEffect(() => {
         setSearch(localStorage.getItem("category") as category);
