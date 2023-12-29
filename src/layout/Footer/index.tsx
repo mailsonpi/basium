@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                     <Link href={"https://agroplanassessoria.com/"}>
                         <Image
                             w={{ base: 100, md: 150 }}
-                            src="/MARCAGIRASSOL.svg"
+                            src="/graeep_marca_rodape.svg"
                             alt="Agroplan"
                         />
                     </Link>

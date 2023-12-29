@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import { useCheckSexSelected } from "@/context";
 import { destaquesM } from "@/resources/products/masculino/destaquesM";
 import { destaquesF } from "@/resources/products/feminino/destaquesF";
+import { Quiz } from "../Quiz";
 
 const ProductList: React.FC = () => {
     const navigator = useRouter();
@@ -107,15 +108,17 @@ const ProductList: React.FC = () => {
                     Acessórios exclusivos
                 </Text>
                 <Heading>MONTE SEU ESTILO</Heading>
-                <Button
-                    mt={5}
-                    p={3}
-                    bg="secondary.900"
-                    color="white"
-                    _hover={{ bg: "secondary.800", color: "primary.400" }}
-                >
-                    Crie agora
-                </Button>
+                <Quiz>
+                    <Button
+                        mt={5}
+                        p={3}
+                        bg="secondary.900"
+                        color="white"
+                        _hover={{ bg: "secondary.800", color: "primary.400" }}
+                    >
+                        Crie agora
+                    </Button>
+                </Quiz>
             </Center>
         </Flex>
     );
