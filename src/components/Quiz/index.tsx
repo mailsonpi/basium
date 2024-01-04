@@ -22,15 +22,17 @@ import React from "react";
 
 interface IProps {
     children: React.ReactNode;
+    isMasculine: boolean;
 }
 
-const Quiz: React.FC<IProps> = ({ children }) => {
+const Quiz: React.FC<IProps> = ({ children, isMasculine }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const { sexSelected } = useCheckSexSelected();
     const [load, setLoad] = React.useState(false);
     const [youFind, setYouFind] = React.useState("Calçados");
     const [color, setColor] = React.useState("");
     const [occasion, setOccasion] = React.useState("");
+    const [number, setNumber] = React.useState("");
     const toast = useToast();
 
     emailjs.init("XTznaL0dunG27kq9B");
@@ -41,6 +43,7 @@ const Quiz: React.FC<IProps> = ({ children }) => {
                 O que você procura: ${youFind},
                 Cor: ${color},
                 Ocasião: ${occasion},
+                Numero do cliente: ${number},
             `,
         };
         setLoad(true);
@@ -63,6 +66,34 @@ const Quiz: React.FC<IProps> = ({ children }) => {
             setLoad(false);
         }
     };
+
+    const cellNumberFormat = (inputValue: string) => {
+        if (!inputValue) return "";
+        inputValue = inputValue.replace(/\D/g, "");
+
+        if (inputValue.length <= 2) {
+            inputValue = `(${inputValue}`;
+        } else if (inputValue.length <= 3) {
+            inputValue = `(${inputValue.substring(
+                0,
+                2
+            )}) ${inputValue.substring(2)}`;
+        } else if (inputValue.length <= 7) {
+            inputValue = `(${inputValue.substring(
+                0,
+                2
+            )}) ${inputValue.substring(2, 3)} ${inputValue.substring(3)}`;
+        } else {
+            inputValue = `(${inputValue.substring(
+                0,
+                2
+            )}) ${inputValue.substring(2, 3)} ${inputValue.substring(
+                3,
+                7
+            )}-${inputValue.substring(7, 11)}`;
+        }
+        return inputValue;
+    };
     return (
         <>
             <Box onClick={onOpen}>{children}</Box>
@@ -77,7 +108,7 @@ const Quiz: React.FC<IProps> = ({ children }) => {
                     bg={
                         sexSelected === "masculine"
                             ? "secondary.900"
-                            : "primary.100"
+                            : "primary.400"
                     }
                 >
                     <ModalHeader
@@ -147,6 +178,21 @@ const Quiz: React.FC<IProps> = ({ children }) => {
                                     }}
                                     onChange={(e) =>
                                         setOccasion(e.target.value)
+                                    }
+                                />
+                                <Text mb={1}>Digite seu número:</Text>
+                                <Input
+                                    bg="primary.100"
+                                    color="black"
+                                    mb={4}
+                                    value={number}
+                                    _focus={{
+                                        bg: "primary.100",
+                                    }}
+                                    onChange={(e) =>
+                                        setNumber(
+                                            cellNumberFormat(e.target.value)
+                                        )
                                     }
                                 />
                             </>

@@ -108,7 +108,7 @@ const ProductList: React.FC = () => {
                     Acessórios exclusivos
                 </Text>
                 <Heading>MONTE SEU ESTILO</Heading>
-                <Quiz>
+                <Quiz isMasculine={sexSelected === "masculine"}>
                     <Button
                         mt={5}
                         p={3}
