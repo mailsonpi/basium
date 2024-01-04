@@ -30,7 +30,7 @@ const AllProducts: NextPage = () => {
     React.useEffect(() => {
         const items: IPart[] = [];
         typeOfProducts.map((item) => items.push(...(item as IPart[])));
-        setAllProduct(items.sort());
+        setAllProduct(items.sort(() => Math.random() - 0.5));
     }, []);
 
     const indexLast = page * itemPerPage;
