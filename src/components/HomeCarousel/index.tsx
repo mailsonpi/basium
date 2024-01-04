@@ -9,50 +9,73 @@ const HomeCarousel: React.FC = () => {
 
     const bannersMasculine = [
         {
-            url: "url('/ImgBannerHome/fullbanner_calca.svg')",
-            text1: "Grandes Ofertas",
-            text2: "Roupas a partir de",
-            text3: "R$ 79,90",
-            off: {
-                text1: "Parcelas de 6x sem juros",
-                text2: "Enviamos para todo Brasil",
-                text3: "Desconto de 10% em compras no pix",
-            },
-        },
-        {
-            url: "url('/ImgBannerHome/fullbanner_sloganM.svg')",
-            text1: "Grandes Ofertas",
-            text2: "Seu estilo com",
-            text3: "toque de classe!",
-            off: {
-                text1: "Parcelas de 6x sem juros",
-                text2: "Enviamos para todo Brasil",
-                text3: "Desconto de 10% em compras no pix",
-            },
-        },
-        {
-            url: "url('/ImgBannerHome/fullbanner_sapatosM.svg')",
-            text1: "Grandes Ofertas",
-            text2: "Calçados a partir de",
-            text3: "R$ 99,90",
-            off: {
-                text1: "Parcelas de 6x sem juros",
-                text2: "Enviamos para todo Brasil",
-                text3: "Desconto de 10% em compras no pix",
-            },
-        },
-        {
-            url: "url('/ImgBannerHome/fullbanner_acessoriosM.svg')",
-            text1: "Grandes Ofertas",
+            url: "url('/ImgBannerHome/fullbanner_acessorios.svg')",
+            text1: "Seu estilo com toque de classe!",
             text2: "Acessórios a partir de",
-            text3: "R$ 34,99",
+            text3: "R$ 35,90",
             off: {
                 text1: "Parcelas de 6x sem juros",
                 text2: "Enviamos para todo Brasil",
                 text3: "Desconto de 10% em compras no pix",
+            },
+        },
+        {
+            url: "url('/ImgBannerHome/fullbanner_sapatos.svg')",
+            text1: "",
+            text2: "Sapatos a partir de",
+            text3: "R$ 315,00",
+            off: {
+                text1: "",
+                text2: "",
+                text3: "",
+            },
+        },
+        {
+            url: "url('/ImgBannerHome/fullbanner_camisassociais.svg')",
+            text1: "",
+            text2: "Camisas Sociais a partir de",
+            text3: "R$ 230,00",
+            off: {
+                text1: "",
+                text2: "",
+                text3: "",
+            },
+        },
+        {
+            url: "url('/ImgBannerHome/fullbanner_blazers.svg')",
+            text1: "",
+            text2: "Blazers a partir de",
+            text3: "R$ 590,00",
+            off: {
+                text1: "",
+                text2: "",
+                text3: "",
+            },
+        },
+        {
+            url: "url('/ImgBannerHome/fullbanner_calças.svg')",
+            text1: "",
+            text2: "Calças a partir de",
+            text3: "R$ 195,00",
+            off: {
+                text1: "",
+                text2: "",
+                text3: "",
+            },
+        },
+        {
+            url: "url('/ImgBannerHome/fullbanner_trajes.svg')",
+            text1: "",
+            text2: "Trajes a partir de",
+            text3: "R$ 980,00",
+            off: {
+                text1: "",
+                text2: "",
+                text3: "",
             },
         },
     ];
+
     const bannersFeminine = [
         {
             url: "url('/ImgBannerHome/fullbanner_roupasF.svg')",
@@ -97,9 +120,10 @@ const HomeCarousel: React.FC = () => {
         >
             <Carousel
                 showIndicators={false}
-                showArrows={false}
                 showStatus={false}
                 showThumbs={false}
+                swipeable
+                emulateTouch
                 width="100%"
                 infiniteLoop
                 interval={2000}
@@ -115,7 +139,7 @@ const HomeCarousel: React.FC = () => {
                         mx="auto"
                         bgRepeat="no-repeat"
                         bgPosition="right"
-                        h={{ base: "45vh", md: "90vh" }}
+                        h={{ base: "45vh", md: "68vh" }}
                     >
                         <Flex
                             direction="column"
@@ -161,7 +185,7 @@ const HomeCarousel: React.FC = () => {
                                         bgPosition: "center",
                                     }}
                                     w="200px"
-                                    mt={20}
+                                    mt={32}
                                     fontSize="15px"
                                     h="50px"
                                     color="white"

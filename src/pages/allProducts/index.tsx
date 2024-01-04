@@ -22,17 +22,20 @@ const AllProducts: NextPage = () => {
     const router = useRouter();
 
     const typeOfProducts =
-        sexSelected === "masculine" ? masculineProducts : feminineProducts;
+        typeof window !== "undefined" &&
+        window.localStorage.getItem("sex") === "masculine"
+            ? masculineProducts
+            : feminineProducts;
 
     React.useEffect(() => {
         const items: IPart[] = [];
         typeOfProducts.map((item) => items.push(...(item as IPart[])));
-        setAllProduct(items);
+        setAllProduct(items.sort(() => Math.random() - 0.5));
     }, []);
 
     const indexLast = page * itemPerPage;
     const indexFirst = indexLast - itemPerPage;
-    let productsList = allProduct.slice(indexFirst, indexLast);
+    let productsList = allProduct.sort().slice(indexFirst, indexLast);
     const renderItem = () => {
         if (search) {
             const filtered = allProduct.filter((item) =>
@@ -41,7 +44,7 @@ const AllProducts: NextPage = () => {
             productsList = filtered;
             return productsList;
         }
-        return productsList;
+        return productsList.sort();
     };
     const nextPage = () => {
         if (productsList.length >= itemPerPage) {
@@ -102,188 +105,230 @@ const AllProducts: NextPage = () => {
                     </Text>
                 </Center>
                 <Flex
-                    flexWrap="wrap"
-                    justifyContent="space-between"
+                    flexDir={{ base: "column", md: "row" }}
+                    justifyContent="center"
                     mx="5%"
                     pt={4}
-                    gap={5}
                 >
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Blusas Sociais")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
+                    <Flex
+                        direction="column"
+                        gap={3}
+                        borderRight={{ base: "none", md: "1px solid #FFFFFF" }}
+                        borderBottom={{ base: "1px solid", md: "none" }}
+                        borderColor="#FFFFFF"
+                        px={10}
+                        py={5}
                     >
-                        Blusas Sociais
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Calças Jeans")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Blazer")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Blazer
+                        </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Trajes")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Trajes
+                        </Text>
+                    </Flex>
+                    <Flex
+                        direction="column"
+                        gap={3}
+                        borderRight={{ base: "none", md: "1px solid #FFFFFF" }}
+                        borderBottom={{ base: "1px solid", md: "none" }}
+                        borderColor="#FFFFFF"
+                        px={10}
+                        py={5}
                     >
-                        Calças Jeans
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("T-Shirts")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Blusas Sociais")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Camisas Sociais
+                        </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Camisa Polo")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Camisas Polo
+                        </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("T-Shirts")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            T-Shirts
+                        </Text>
+                    </Flex>
+                    <Flex
+                        direction="column"
+                        gap={3}
+                        borderRight={{ base: "none", md: "1px solid #FFFFFF" }}
+                        borderBottom={{ base: "1px solid", md: "none" }}
+                        borderColor="#FFFFFF"
+                        px={10}
+                        py={5}
                     >
-                        T-Shirts
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Camisa Polo")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Camisas Polo
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Trajes")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Trajes
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Livros")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Livros
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Blazer")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Blazer
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Calças Alfaiataria")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Calças Alfaiataria
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Bermudas")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Bermudas
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Calçados")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Calçados
-                    </Text>
-                    <Text
-                        color={
-                            sexSelected === "masculine"
-                                ? "white"
-                                : "secondary.800"
-                        }
-                        fontWeight="bold"
-                        onClick={() => setSearch("Acessórios")}
-                        transition=".2s"
-                        cursor="pointer"
-                        _hover={{
-                            opacity: 0.6,
-                        }}
-                    >
-                        Acessórios
-                    </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Calças Jeans")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Calças Jeans
+                        </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Calças Alfaiataria")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Calças Alfaiataria
+                        </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Bermudas")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Bermudas
+                        </Text>
+                    </Flex>
+                    <Flex direction="column" gap={3} px={10} py={5}>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Calçados")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Calçados
+                        </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Acessórios")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Acessórios
+                        </Text>
+                        <Text
+                            color={
+                                sexSelected === "masculine"
+                                    ? "white"
+                                    : "secondary.800"
+                            }
+                            fontWeight="bold"
+                            onClick={() => setSearch("Livros")}
+                            transition=".2s"
+                            cursor="pointer"
+                            textAlign="center"
+                            _hover={{
+                                opacity: 0.6,
+                            }}
+                        >
+                            Livros
+                        </Text>
+                    </Flex>
                 </Flex>
                 <Grid
                     w={{ base: "95%", md: "85%" }}

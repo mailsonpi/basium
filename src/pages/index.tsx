@@ -25,7 +25,10 @@ const InitialPage: NextPage = () => {
         <Flex h="100vh" flexDirection="column">
             <Center
                 h="50%"
-                bg="primary.100"
+                bg={{
+                    base: "url('/imgSelectSex/menu_banner_femmobile.png')",
+                    md: "url('/imgSelectSex/menu_banner_fem.png')",
+                }}
                 flexDirection="column"
                 justifyContent="space-around"
             >
@@ -56,7 +59,12 @@ const InitialPage: NextPage = () => {
             </Center>
             <Center
                 h="50%"
-                bg="secondary.900"
+                bg={{
+                    base: "url('/imgSelectSex/menu_banner_mascmobile.png')",
+                    md: "url('/imgSelectSex/menu_banner_masc.png')",
+                }}
+                bgRepeat="no-repeat"
+                bgSize="cover"
                 flexDirection="column"
                 justifyContent="space-around"
             >
