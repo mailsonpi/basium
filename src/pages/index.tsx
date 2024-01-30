@@ -1,12 +1,18 @@
 import React from "react";
 import { NextPage } from "next";
-import { Flex, Center, Button, Heading } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
+import InitialCarousel from "@/components/InitialCarousel";
+import CategoriesInitial from "@/components/CategoriesInitial";
+import SelectSexInitial from "@/components/SelectSexInitial";
+import CategoriesInitialFem from "@/components/CategoriesInitialFem";
+import Footer from "@/layout/Footer";
 import { useRouter } from "next/router";
-import { useCheckSexSelected } from "@/context";
+import { category } from "@/resources/products/categorias";
+import CategoriesInitialMobile from "@/components/CategoriesInitialMobile";
+import MobileCategorySelect from "@/components/MobileCategorySelect";
 
 const InitialPage: NextPage = () => {
     const router = useRouter();
-    const { updateSexSelected } = useCheckSexSelected();
     const onClick = (isMasculine: boolean) => {
         if (isMasculine) {
             router.push("/loading");
@@ -16,76 +22,39 @@ const InitialPage: NextPage = () => {
         router.push("/loading");
         localStorage.setItem("sex", "feminine");
     };
-    React.useEffect(() => {
-        updateSexSelected("");
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+
+    const onGoToFilteredProducts = (
+        filter: category,
+        isMasculine?: boolean
+    ) => {
+        if (isMasculine) {
+            localStorage.setItem("category", filter);
+            localStorage.setItem("sex", "masculine");
+            router.push("secondLoading");
+            return;
+        }
+        localStorage.setItem("sex", "feminine");
+        localStorage.setItem("category", filter);
+        router.push("secondLoading");
+    };
 
     return (
-        <Flex h="100vh" flexDirection="column">
-            <Center
-                h="50%"
-                bg={{
-                    base: "url('/imgSelectSex/menu_banner_femmobile.png')",
-                    md: "url('/imgSelectSex/menu_banner_fem.png')",
-                }}
-                flexDirection="column"
-                justifyContent="space-around"
-            >
-                <Heading
-                    fontFamily="'Libre Baskerville', serif"
-                    color="#745646"
-                    fontSize={{ base: 60, md: 80 }}
-                    textAlign="center"
-                >
-                    Qual Gênero?
-                </Heading>
-                <Button
-                    onClick={() => onClick(false)}
-                    h="121px"
-                    fontSize={{ base: 52, md: 80 }}
-                    bg="primary.400"
-                    color="#745646"
-                    px={6}
-                    rounded="2xl"
-                    fontFamily="'Libre Baskerville', serif"
-                    _hover={{
-                        bg: "primary.400",
-                        color: "white",
-                    }}
-                >
-                    Feminino
-                </Button>
-            </Center>
-            <Center
-                h="50%"
-                bg={{
-                    base: "url('/imgSelectSex/menu_banner_mascmobile.png')",
-                    md: "url('/imgSelectSex/menu_banner_masc.png')",
-                }}
-                bgRepeat="no-repeat"
-                bgSize="cover"
-                flexDirection="column"
-                justifyContent="space-around"
-            >
-                <Button
-                    onClick={() => onClick(true)}
-                    h="121px"
-                    fontSize={{ base: 52, md: 80 }}
-                    bg="primary.400"
-                    color="#745646"
-                    px={6}
-                    rounded="2xl"
-                    fontFamily="'Libre Baskerville', serif"
-                    _hover={{
-                        bg: "primary.400",
-                        color: "white",
-                    }}
-                >
-                    Masculino
-                </Button>
-                <span />
-            </Center>
+        <Flex flexDirection="column">
+            <Flex flexDirection="column" display={{ base: "none", md: "flex" }}>
+                <InitialCarousel />
+                <CategoriesInitial onClickProduct={onGoToFilteredProducts} />
+                <SelectSexInitial onClick={onClick} />
+                <CategoriesInitialFem onClickProduct={onGoToFilteredProducts} />
+            </Flex>
+            <Flex flexDirection="column" display={{ base: "flex", md: "none" }}>
+                <InitialCarousel />
+                <CategoriesInitialMobile
+                    onClickProduct={onGoToFilteredProducts}
+                />
+                <SelectSexInitial onClick={onClick} />
+                <MobileCategorySelect onClickProduct={onGoToFilteredProducts} />
+            </Flex>
+            <Footer />
         </Flex>
     );
 };
