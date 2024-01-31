@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Grid, Text } from "@chakra-ui/react";
+import { Box, Center, Grid, Image, Text } from "@chakra-ui/react";
 
 interface IProps {
     onClick: (isMasculine: boolean) => void;
@@ -13,6 +13,7 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
             px={10}
         >
             <Center
+                display={{ base: "none", md: "flex" }}
                 h={400}
                 onClick={() => onClick(false)}
                 bg={{
@@ -44,6 +45,7 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
                 </Box>
             </Center>
             <Center
+                display={{ base: "none", md: "flex" }}
                 h={400}
                 onClick={() => onClick(true)}
                 bg={{
@@ -74,6 +76,24 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
                     </Text>
                 </Box>
             </Center>
+            <Image
+                src="/ImgInitialPage/modamasculina_mobile_1.png"
+                display={{ base: "block", md: "none" }}
+                alt="Moda Masculina"
+                w="100%"
+                _hover={{
+                    filter: "brightness(0.8)",
+                }}
+            />
+            <Image
+                src="/ImgInitialPage/modafeminina_mobile_1.png"
+                display={{ base: "block", md: "none" }}
+                alt="Moda Masculina"
+                w="100%"
+                _hover={{
+                    filter: "brightness(0.8)",
+                }}
+            />
         </Grid>
     );
 };

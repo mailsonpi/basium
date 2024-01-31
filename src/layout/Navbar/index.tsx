@@ -54,12 +54,14 @@ const Navbar: React.FC<IProps> = ({ colorTheming }) => {
                 h="100%"
             >
                 <Image
+                    onClick={() => router.push("/")}
                     src={
                         colorTheming !== "darkCyan"
                             ? "/img/marca_cabecalho44.png"
                             : "/img/marca_cabecalho.png"
                     }
                     alt="Logo"
+                    cursor="pointer"
                     w={32}
                 />
                 <Flex gap={10} alignItems="center">
@@ -68,7 +70,7 @@ const Navbar: React.FC<IProps> = ({ colorTheming }) => {
                         cursor="pointer"
                         _hover={{ color: "primary.500" }}
                         fontWeight={600}
-                        onClick={() => router.push("/home")}
+                        onClick={() => router.push("/")}
                     >
                         Início
                     </Text>
