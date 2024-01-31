@@ -17,7 +17,7 @@ const MobileCategorySelect: React.FC<IProps> = ({ onClickProduct }) => {
                 cursor="pointer"
                 transition=".4s"
                 _hover={{
-                    opacity: 0.8,
+                    filter: "brightness(0.5)",
                 }}
             />
             <Image
@@ -28,7 +28,7 @@ const MobileCategorySelect: React.FC<IProps> = ({ onClickProduct }) => {
                 cursor="pointer"
                 transition=".4s"
                 _hover={{
-                    opacity: 0.8,
+                    filter: "brightness(0.5)",
                 }}
             />
             <Image
@@ -39,7 +39,7 @@ const MobileCategorySelect: React.FC<IProps> = ({ onClickProduct }) => {
                 cursor="pointer"
                 transition=".4s"
                 _hover={{
-                    opacity: 0.8,
+                    filter: "brightness(0.5)",
                 }}
             />
         </Grid>

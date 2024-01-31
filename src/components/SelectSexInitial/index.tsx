@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Center, Grid, Text } from "@chakra-ui/react";
+import { Box, Center, Grid, Image, Text } from "@chakra-ui/react";
 
 interface IProps {
     onClick: (isMasculine: boolean) => void;
@@ -13,15 +13,20 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
             px={10}
         >
             <Center
+                display={{ base: "none", md: "flex" }}
                 h={400}
-                bgPosition="center"
                 onClick={() => onClick(false)}
-                bg="url('/ImgInitialPage/moda_feminina.png')"
+                bg={{
+                    base: "url('/ImgInitialPage/menumobile_feminina.png')",
+                    md: "url('/ImgInitialPage/moda_feminina.png')",
+                }}
+                bgRepeat="no-repeat"
+                bgSize="cover"
                 cursor="pointer"
                 transition=".4s"
                 w="100%"
                 _hover={{
-                    opacity: 0.8,
+                    filter: "brightness(0.8)",
                 }}
             >
                 <Box
@@ -32,7 +37,7 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
                 >
                     <Text
                         fontFamily="'DM Serif Display', serif"
-                        fontSize={42}
+                        fontSize={{ base: 24, md: 42 }}
                         color="primary.100"
                     >
                         Moda Feminina
@@ -40,14 +45,20 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
                 </Box>
             </Center>
             <Center
+                display={{ base: "none", md: "flex" }}
                 h={400}
                 onClick={() => onClick(true)}
-                bg="url('/ImgInitialPage/moda_masculina.png')"
+                bg={{
+                    base: "url('/ImgInitialPage/menumobile_masculina.png')",
+                    md: "url('/ImgInitialPage/moda_masculina.png')",
+                }}
                 w="100%"
+                bgRepeat="no-repeat"
+                bgPosition="center"
                 cursor="pointer"
                 transition=".4s"
                 _hover={{
-                    opacity: 0.8,
+                    filter: "brightness(0.8)",
                 }}
             >
                 <Box
@@ -58,13 +69,31 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
                 >
                     <Text
                         fontFamily="'DM Serif Display', serif"
-                        fontSize={42}
+                        fontSize={{ base: 24, md: 42 }}
                         color="primary.100"
                     >
                         Moda Masculina
                     </Text>
                 </Box>
             </Center>
+            <Image
+                src="/ImgInitialPage/modamasculina_mobile_1.png"
+                display={{ base: "block", md: "none" }}
+                alt="Moda Masculina"
+                w="100%"
+                _hover={{
+                    filter: "brightness(0.8)",
+                }}
+            />
+            <Image
+                src="/ImgInitialPage/modafeminina_mobile_1.png"
+                display={{ base: "block", md: "none" }}
+                alt="Moda Masculina"
+                w="100%"
+                _hover={{
+                    filter: "brightness(0.8)",
+                }}
+            />
         </Grid>
     );
 };
