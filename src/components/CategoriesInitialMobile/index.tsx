@@ -11,7 +11,7 @@ const CategoriesInitialMobile: React.FC<IProps> = ({ onClickProduct }) => {
         <Grid gridTemplateColumns="1fr 1fr" p={10} gap={10}>
             <Image
                 w="100%"
-                src="/ImgInitialPage/menu_blazermobile.png"
+                src="/ImgInitialPage/menu_blazermobile.svg"
                 onClick={() => onClickProduct("Blazer", true)}
                 alt="Blazer"
                 cursor="pointer"
@@ -22,7 +22,7 @@ const CategoriesInitialMobile: React.FC<IProps> = ({ onClickProduct }) => {
             />
             <Image
                 w="100%"
-                src="/ImgInitialPage/menu_blazerfemmobile.png"
+                src="/ImgInitialPage/menu_blazerfemmobile.svg"
                 onClick={() => onClickProduct("Blazer")}
                 alt="Calça"
                 cursor="pointer"
