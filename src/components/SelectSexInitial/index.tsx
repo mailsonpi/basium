@@ -77,7 +77,7 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
                 </Box>
             </Center>
             <Image
-                src="/ImgInitialPage/modamasculina_mobile_1.png"
+                src="/ImgInitialPage/mobilemenumasc.svg"
                 display={{ base: "block", md: "none" }}
                 alt="Moda Masculina"
                 w="100%"
@@ -86,7 +86,7 @@ const SelectSexInitial: React.FC<IProps> = ({ onClick }) => {
                 }}
             />
             <Image
-                src="/ImgInitialPage/modafeminina_mobile_1.png"
+                src="/ImgInitialPage/mobilemenufem.svg"
                 display={{ base: "block", md: "none" }}
                 alt="Moda Masculina"
                 w="100%"

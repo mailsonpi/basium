@@ -11,7 +11,7 @@ const MobileCategorySelect: React.FC<IProps> = ({ onClickProduct }) => {
         <Grid gridTemplateColumns="1fr" my={10}>
             <Image
                 w="100%"
-                src="/ImgInitialPage/menu_calçasmobile.png"
+                src="/ImgInitialPage/mobilecalçafem.svg"
                 onClick={() => onClickProduct("Calças Jeans", true)}
                 alt="Calça"
                 cursor="pointer"
@@ -22,9 +22,9 @@ const MobileCategorySelect: React.FC<IProps> = ({ onClickProduct }) => {
             />
             <Image
                 w="100%"
-                onClick={() => onClickProduct("Blusas Sociais", true)}
-                src="/ImgInitialPage/menu_camisamobile.png"
-                alt="Camisa Social"
+                src="/ImgInitialPage/mobilebolsa.svg"
+                onClick={() => onClickProduct("Acessórios")}
+                alt="Blazer"
                 cursor="pointer"
                 transition=".4s"
                 _hover={{
@@ -33,9 +33,9 @@ const MobileCategorySelect: React.FC<IProps> = ({ onClickProduct }) => {
             />
             <Image
                 w="100%"
-                src="/ImgInitialPage/menu_bolsasmobile.png"
-                onClick={() => onClickProduct("Acessórios")}
-                alt="Blazer"
+                onClick={() => onClickProduct("Blusas Sociais", true)}
+                src="/ImgInitialPage/mobilecamisa.svg"
+                alt="Camisa Social"
                 cursor="pointer"
                 transition=".4s"
                 _hover={{
